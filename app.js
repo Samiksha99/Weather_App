@@ -1,33 +1,3 @@
-// window.addEventListener('load' ,()=>{
-//     let long;
-//     let lat;
-
-//     if(navigator.geolocation){
-//         navigator.geolocation.getCurrentPosition(position =>{
-//             long = position.coords.longitude;
-//             lat = position.coords.latitude;
-
-//             const proxy = "https://cors-anywhere.herokuapp.com/";
-//             var api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=b364129327d31578cc2ec00f3f758405`;
-//             console.log(api)
-//             fetch(api, {mode: 'no-cors'})
-            
-//                 .then(response => {
-//                   return response.text();
-//                 })
-//                 .then(data =>{
-//                     data = (data ? JSON.parse(data): console.log(data))
-//                     const(temperature, summary) = 
-//                 })
-                
-               
-                
-//         });
-        
-
-       
-//     }
-// });
 const api = {
     key:  "b364129327d31578cc2ec00f3f758405",
     base: "https://api.openweathermap.org/data/2.5/"
@@ -67,7 +37,7 @@ function displayResults(weather) {
    
 
 
-    let faren = (weather.main.temp*(9/5))+32;
+    let faren = Math.round(weather.main.temp*(9/5))+32;
     const tempSpan = document.querySelector('.temp span');
     temp.addEventListener('click',() =>{
         if(tempSpan.textContent === 'C') {
