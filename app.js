@@ -30,7 +30,7 @@
 // });
 const api = {
     key:  "b364129327d31578cc2ec00f3f758405",
-    base: "http://api.openweathermap.org/data/2.5/"
+    base: "https://api.openweathermap.org/data/2.5/"
 }
 const searchbox = document.querySelector('.search-box');
 searchbox.addEventListener('keypress', setQuery);
