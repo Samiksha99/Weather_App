@@ -1,3 +1,3 @@
 # Weather_App
 
-A weathet app using openweather api
+A weather app using openweather api
